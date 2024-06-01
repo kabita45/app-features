@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --smaller: .75;
+    /* Color Variables */
+    --clr-primary: #ff6600;
+    --clr-secondary: #ff6600bd;
+    --clr-primary-hover: #cc5500;
+    --clr-background: #202020;
+    --clr-text: #fff;
+    --clr-heading: #f3dacb;
+    --clr-feature-bg1: #82310c;
+    --clr-feature-bg2: #ff7f0a;
+    --clr-card-details-bg: rgba(255, 255, 255, 0.4);
+
+    /* Gray Scale Variables */
+    --clr-gray100: #f9fbff;
+    --clr-gray150: #f4f6fb;
+    --clr-gray200: #eef1f6;
+    --clr-gray300: #e1e5ee;
+    --clr-gray400: #767b91;
+    --clr-gray500: #4f546c;
+    --clr-gray600: #2a324b;
+    --clr-gray700: #161d34;
+    --clr-gray800: #0c101d;
+
+    /* Border Radius */
+    --radius: 1rem;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--clr-background);
+    color: var(--clr-text);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100vh;
+    background-image: url("https://imgd.aeplcdn.com/1280x720/cw/ec/21654/Jaguar-FType-Front-view-64913.jpg?wm=0&t=114857943&t=114857943");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .navbar nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+header .navbar nav ul li {
+    transition: all 0.3s ease-in-out;
+}
+
+header .navbar nav ul li:hover {
+    cursor: pointer;
+    color: var(--clr-primary);
+}
+
+header .navbar div {
+    height: 60px;
+    width: 100px;
+}
+
+header .navbar div img {
+    height: 100%;
+    width: 100%;
+}
+
+header .navbar button {
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+header .navbar button:hover {
+    background-color: var(--clr-primary-hover);
+}
+
+.container {
+    font-family: "Varela Round", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    height: 100%;
+    color: var(--clr-text);
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        letter-spacing: .125rem;
+        font-weight: 600;
+        margin: 0;
+        font-size: clamp(1.5rem, 9vw, 3.4rem);
+
+        span {
+            color: var(--clr-primary);
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.3rem;
+        color: var(--clr-gray300);
+    }
+
+    li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        padding-inline: 1em;
+        text-transform: uppercase;
+
+        span {
+            display: block;
+            font-size: 4.5rem;
+        }
+    }
+}
+
+.overlay {
+    border-image: linear-gradient(hsla(25, 76%, 13%, 0.3), hsla(16, 73%, 10%, 0.759)) fill 1;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    max-width: 100%;
+}
+
+.intro-text {
+    flex: 1;
+
+    h2 {
+        margin-bottom: 10px;
+        color: var(--clr-secondary);
+        text-transform: uppercase;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.features,
+.gallery,
+.cta {
+    padding: 50px;
+    text-align: center;
+}
+
+.features {
+    background-color: var(--clr-gray800);
+}
+
+.features h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--clr-secondary);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 4rem);
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(to bottom right, var(--clr-feature-bg1), var(--clr-feature-bg2));
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.feature-card h3,
+.feature-card p {
+    color: var(--clr-text);
+}
+
+.gallery {
+    padding: 50px;
+
+}
+
+.gallery>h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--clr-secondary);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: clamp(1.5rem, 7vw, 4rem);
+}
+
+.image-grid {
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    position: relative;
+    margin: 5px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card .card__img {
+    transition: transform 250ms ease-out;
+    border-radius: var(--radius);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card .card__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-card-details-bg);
+    backdrop-filter: blur(10px) brightness(1.3);
+    opacity: 0;
+    transition: opacity 350ms, transform 350ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card .card__details h2 {
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    color: var(--clr-gray800);
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card .card__details p {
+    color: var(--clr-gray600);
+    font-size: clamp(0.2rem, 2vw, 1rem);
+
+}
+
+.card:hover .card__img {
+    transform: scale(1.1);
+}
+
+.card:hover .card__details {
+    opacity: 1;
+}
+
+.cta {
+    background-color: var(--clr-gray800);
+
+    h2 {
+        color: var(--clr-secondary);
+
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--clr-primary-hover);
+}
+
+footer {
+    text-align: center;
+    padding: 8px 0;
+}
+
+
+@media all and (max-width: 768px) {
+
+    .container {
+        li {
+            font-size: calc(1.125rem * var(--smaller));
+
+            span {
+                font-size: calc(3.375rem * var(--smaller));
+            }
+        }
+    }
+
+    .intro {
+        flex-direction: column;
+    }
+
+    .card .card__details h2,
+    p {
+        margin: 0 !important;
+    }
+
+    header .navbar {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    header .navbar nav ul {
+       padding: 0;
+    }
+
+    header .navbar div {
+        display: none;
+    }
+}
